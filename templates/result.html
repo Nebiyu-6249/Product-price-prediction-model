@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Prediction Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-50">
+    <div class="max-w-3xl mx-auto py-10 px-4">
+      <a class="text-slate-600 hover:underline" href="/">&larr; Back</a>
+
+      <h1 class="text-3xl font-bold mt-4">Predicted price</h1>
+
+      <div class="mt-6 bg-white rounded-xl shadow p-6">
+        <div class="text-5xl font-bold">${{ predicted_price }}</div>
+        <div class="text-sm text-slate-600 mt-2">Estimated USD price (demo model)</div>
+      </div>
+
+      <div class="mt-6 bg-white rounded-xl shadow p-6">
+        <h2 class="text-xl font-semibold">Model input text</h2>
+        <pre class="mt-3 whitespace-pre-wrap text-sm bg-slate-100 p-4 rounded">{{ text }}</pre>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Product Price Prediction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-slate-50">
+    <div class="max-w-3xl mx-auto py-10 px-4">
+      <h1 class="text-3xl font-bold">Product Price Prediction</h1>
+      <p class="text-slate-600 mt-2">Enter product details and get an estimated USD price.</p>
+
+      <form class="mt-8 bg-white p-6 rounded-xl shadow" action="/predict" method="post">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-slate-700">Title</label>
+            <input class="mt-1 w-full border rounded px-3 py-2" name="title" placeholder="Wireless headphones" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700">Category</label>
+            <input class="mt-1 w-full border rounded px-3 py-2" name="category" placeholder="Electronics" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+          <div>
+            <label class="block text-sm font-medium text-slate-700">Brand</label>
+            <input class="mt-1 w-full border rounded px-3 py-2" name="brand" placeholder="Acme" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700">Details</label>
+            <input class="mt-1 w-full border rounded px-3 py-2" name="details" placeholder="Includes carrying case" />
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <label class="block text-sm font-medium text-slate-700">Description</label>
+          <textarea class="mt-1 w-full border rounded px-3 py-2 h-28" name="description" placeholder="Over-ear, bluetooth 5.3, 40h battery"></textarea>
+        </div>
+
+        <button class="mt-6 w-full bg-slate-900 text-white rounded px-4 py-2 hover:bg-slate-800" type="submit">
+          Predict price
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
